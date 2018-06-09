@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="81dp">
+
+    <LinearLayout
+        android:id="@+id/title_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:gravity="center_vertical">
+
+        <ImageView
+            style="@style/FormIconStyle"
+            android:src="@drawable/ic_create" />
+
+        <EditText
+            android:id="@+id/edit_text_course_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/course_title"
+            android:inputType="textEmailSubject" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/date_wrapper"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginRight="@dimen/margin_medium"
+        app:layout_constraintTop_toBottomOf="@+id/title_wrapper"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/icon_date_wrapper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.16"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/FormIconStyle"
+                android:src="@drawable/ic_event" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/start_date_wrapper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_course_start_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/edit_text_course_start_date"
+                        style="@android:style/Widget.EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/start_date"
+                        android:inputType="date"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_start_date_reminder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/reminder"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/end_date_wrapper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/text_input_course_end_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/edit_text_course_end_date"
+                        style="@android:style/Widget.EditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/end_date"
+                        android:inputType="date"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_end_date_reminder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/reminder"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mentor_name_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_medium"
+        app:layout_constraintTop_toBottomOf="@+id/date_wrapper">
+
+        <ImageView
+            style="@style/FormIconStyle"
+            android:src="@drawable/ic_person" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_mentor_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="false">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edit_text_mentor_name"
+                style="@android:style/Widget.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/mentor_name"
+                android:inputType="text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mentor_email_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_medium"
+        app:layout_constraintTop_toBottomOf="@+id/mentor_name_wrapper">
+
+        <ImageView
+            style="@style/FormIconStyle"
+            android:src="@drawable/ic_mail_outline" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_mentor_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="false">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edit_text_mentor_email"
+                style="@android:style/Widget.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/mentor_email"
+                android:inputType="textEmailAddress"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mentor_phone_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_medium"
+        app:layout_constraintTop_toBottomOf="@+id/mentor_email_wrapper">
+
+        <ImageView
+            style="@style/FormIconStyle"
+            android:src="@drawable/ic_call" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_mentor_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="false">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edit_text_mentor_phone"
+                style="@android:style/Widget.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/mentor_phone_number"
+                android:inputType="phone"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/course_status_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_medium"
+        app:layout_constraintTop_toBottomOf="@+id/mentor_phone_wrapper">
+
+        <ImageView
+            style="@style/FormIconStyle"
+            android:src="@drawable/ic_filter_list" />
+
+        <Spinner
+            android:id="@+id/spinner_course_status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/term_wrapper"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginStart="@dimen/margin_medium"-->
+    <!--android:layout_marginEnd="@dimen/margin_medium"-->
+    <!--android:layout_marginTop="@dimen/margin_large"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/course_status_wrapper">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_associated_term"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_marginRight="@dimen/margin_medium"-->
+    <!--android:text="@string/associated_term" />-->
+
+    <!--<Spinner-->
+    <!--android:id="@+id/spinner_terms_list"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="@dimen/margin_medium"-->
+    <!--android:layout_marginRight="@dimen/margin_medium"-->
+    <!--android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/tv_associated_term" />-->
+
+    <!--</LinearLayout>-->
+
+    <TextView
+        android:id="@+id/associated_term"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:paddingBottom="@dimen/margin_small"
+        android:textAlignment="center"
+        android:text="@string/associated_term"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        app:layout_constraintTop_toBottomOf="@+id/course_status_wrapper"/>
+
+    <RadioGroup
+        android:id="@+id/radio_group_terms_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_marginLeft="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        app:layout_constraintTop_toBottomOf="@+id/associated_term" />
+
+    <LinearLayout
+        android:id="@+id/buttons_wrapper"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:layout_marginLeft="@dimen/margin_medium"
+        app:layout_constraintTop_toBottomOf="@+id/radio_group_terms_list"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/button_notes_wrapper"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_notes_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:text="@string/notes"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_assessments_wrapper"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_assessments_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:text="@string/assessments"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_done"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_done"
+        app:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

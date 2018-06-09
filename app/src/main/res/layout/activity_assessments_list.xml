@@ -1,0 +1,15 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wgu.el.wgustudent.ui.assessment.list.AssessmentsListActivity">
+
+    <fragment
+        android:id="@+id/fragment_notes_list"
+        class="com.wgu.el.wgustudent.ui.assessment.list.AssessmentsListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

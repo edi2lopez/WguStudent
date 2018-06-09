@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/margin_large"
+    android:paddingRight="@dimen/margin_large"
+    android:paddingTop="@dimen/margin_large"
+    android:paddingBottom="@dimen/margin_large"
+    tools:context="com.wgu.el.wgustudent.ui.MainActivity">
+
+    <Button
+        android:id="@+id/button_terms_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="termsClickHandler"
+        android:text="@string/all_terms"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="67dp" />
+
+    <Button
+        android:id="@+id/button_courses_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/all_courses"
+        android:onClick="coursesClickHandler"
+        app:layout_constraintTop_toBottomOf="@+id/button_terms_list"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="106dp"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/button_assessments_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/all_assessments"
+        android:onClick="assessmentsClickHandler"
+        app:layout_constraintTop_toBottomOf="@+id/button_courses_list"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="106dp"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/button_notes_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/all_notes"
+        android:onClick="notesClickHandler"
+        app:layout_constraintTop_toBottomOf="@+id/button_assessments_list"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="106dp"
+        android:layout_marginTop="20dp" />
+
+</android.support.constraint.ConstraintLayout>
